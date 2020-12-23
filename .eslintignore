@@ -1,0 +1,19 @@
+src/serviceWorker.ts
+src/setupTests.ts
+craco.config.js
+tailwind.config.js
+postcss.config.js
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+/tests/matchMedia
+
+# production
+/build
+
+# ci/cd
+/.ci
+/docker

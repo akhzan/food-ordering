@@ -1,0 +1,19 @@
+.ant-drawer-close:hover {
+  outline: 0;
+}
+
+.ant-image-preview-img {
+  display: initial;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-form-item-with-help {
+  margin-bottom: 0;
+}
+
+.ant-form-item-explain {
+  font-size: 11px;
+}
