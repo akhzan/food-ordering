@@ -15,8 +15,6 @@ export const errorInterceptor = (err: AxiosError): Promise<never> => {
   if (response) {
     const { status, data } = response
     if (status === 401) {
-      notify(LANG.HTTP_LOGIN_ERROR)
-    } else if (status === 401) {
       notify(LANG.HTTP_SESSION_EXPIRED)
     } else if (status === 403) {
       notify(LANG.HTTP_UNAUTHORIZED_ACTION)

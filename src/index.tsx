@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
-import AppRouter from 'components/router'
 import * as serviceWorker from 'serviceWorker'
-import store from './redux/store'
+import store from 'redux/store'
+import App from 'app'
 import 'antd/dist/antd.less'
 import 'assets/styles/index.css'
 import 'assets/styles/override.css'
@@ -12,7 +12,7 @@ import 'assets/styles/custom.css'
 
 ReactDOM.render(
   <Provider store={store}>
-    <AppRouter />
+    <App />
   </Provider>,
   document.getElementById('root'),
 )

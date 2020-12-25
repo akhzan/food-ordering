@@ -1,7 +1,7 @@
 import axios, { AxiosPromise, AxiosRequestConfig, Method } from 'axios'
 
-import { METHODS } from 'services/api/methods'
-import { errorInterceptor } from 'services/api/interceptors'
+import { METHODS } from 'api/methods'
+import { errorInterceptor } from 'api/interceptors'
 import { API_URL } from 'config/env'
 
 const instance = axios.create()
@@ -11,28 +11,19 @@ export const call = (
   method: Method,
   subUrl = '',
   data: Record<string, any> = {},
-  options?: AxiosRequestConfig,
 ): AxiosPromise => {
   const config: AxiosRequestConfig = {
-    ...options,
     baseURL: API_URL,
     method,
     url: subUrl,
     headers: {
-      ...(options && options.headers ? options.headers : {}),
       'Content-Type': 'application/json',
     },
   }
-  const payload = { ...data }
   if (method === METHODS.GET) {
-    Object.keys(payload).forEach((key) => {
-      if (payload[key] === null || payload[key] === '') {
-        delete payload[key]
-      }
-    })
-    config.params = payload
+    config.params = data
   } else {
-    config.data = payload
+    config.data = data
   }
   return instance.request(config)
 }

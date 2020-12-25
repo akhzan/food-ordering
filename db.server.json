@@ -1,43 +1,47 @@
 {
-  "categories": {
-    "burgers": {
+  "categories": [
+    {
+      "id": "burgers",
       "icon": "http://localhost:5000/burger(24x24)@3x.png",
       "title": "Burgers & Sandwich"
     },
-    "bowls": {
+    {
+      "id": "bowls",
       "icon": "http://localhost:5000/noodles(24x24)@3x.png",
       "title": "Rice Bowls"
     },
-    "sweets": {
+    {
+      "id": "sweets",
       "icon": "http://localhost:5000/slice-cake(24x24)@3x.png",
       "title": "Sweets"
     },
-    "drinks": {
+    {
+      "id": "drinks",
       "icon": "http://localhost:5000/soft-drink(24x24)@3x.png",
       "title": "Drinks"
     }
-  },
-  "menus": {
-    "bbqBurger": { "img": "", "name": "BBQ Burger", "desc": "Beef patty, brisket, cheddar, secret BBQ sauce, buns, fries", "price": 110000, "caategory": "burgers", "isPopular": true },
-    "doubleCheeseBurger": { "img": "", "name": "Double Cheese Burger", "desc": "Beef patty, cheddar, secret sauce, brioche buns, fries", "price": 95000, "caategory": "burgers", "isPopular": false },
-    "grilledCheese": { "img": "", "name": "Grilled Cheese Sandwich", "desc": "Mozarella, red cheddar, honey mustard, brioche toast", "price": 65000, "caategory": "burgers", "isPopular": false },
-    "truffleBugger": { "img": "", "name": "Truffle Burger", "desc": "Beef patty, emmental cheese, truffle sauce, romaine lettuce, fries", "price": 110000, "caategory": "burgers", "isPopular": false },
-    "cheeseQuesadilla": { "img": "", "name": "Cheese Quesadilla", "desc": "Red cheddar, paarmesan, mozarella, dips", "price": 65000, "caategory": "burgers", "isPopular": false },
-    "sambalIjo": { "img": "", "name": "Sambal Ijo Bowl", "desc": "Twice cooked short ribs, poached egg, house special sambal ijo", "price": 120000, "caategory": "bowls", "isPopular": false },
-    "truffleGyudon": { "img": "", "name": "Sliced beef, egg, truffle sauce, fried onions, white rice", "desc": "", "price": 90000, "caategory": "bowls", "isPopular": true },
-    "friedRice": { "img": "", "name": "Kampoeng Fried Rice", "desc": "Chicken satay, emping crackers, housemade pickles", "price": 85000, "caategory": "bowls", "isPopular": false },
-    "grilledChicken": { "img": "", "name": "Grilled Chicken Sambal Matah", "desc": "Grilled chicken, sambal maatah, mango slaw, white rice", "price": 85000, "caategory": "bowls", "isPopular": false },
-    "tiramisu": { "img": "", "name": "Tiramisu", "desc": "ladyfinger, espresso, maascarpone cream, cocoa powder", "price": 65000, "caategory": "sweets", "isPopular": false },
-    "cremeBrulee": { "img": "", "name": "Creme Brulee", "desc": "Vanilla egg custard, caramel", "price": 65000, "caategory": "sweets", "isPopular": false },
-    "pannacotta": { "img": "", "name": "Kopie Pannacotta", "desc": "Caramel coffee paannaacotta, vanilla sauce, micro sponge, crumble, honeycomb", "price": 65000, "caategory": "sweets", "isPopular": false },
-    "kopiSusu": { "img": "", "name": "Es Kopi Susu", "desc": "Single espresso, fresh milk, palm sugar", "price": 35000, "caategory": "drinks", "isPopular": false },
-    "coldBrew": { "img": "", "name": "Caramel Cold Brew", "desc": "Single espresso, fresh milk, caramel", "price": 40000, "caategory": "drinks", "isPopular": false },
-    "chocolate": { "img": "", "name": "Chocolate", "desc": "Iced served with vanilla ice cream", "price": 45000, "caategory": "drinks", "isPopular": false },
-    "greenTea": { "img": "", "name": "Green Tea Latte", "desc": "Iced served with vanilla ice cream", "price": 45000, "caategory": "drinks", "isPopular": false },
-    "lemongrass": { "img": "", "name": "Lemongrass Tea", "desc": "Inhouse tea, lemongrass, orange, lychee", "price": 40000, "caategory": "drinks", "isPopular": false }
-  },
-  "promo": {
-    "freeDelivery": { "title": "Free Delivery Promo", "desc": "No term, no condition. Free delivery in Jakarta Area.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"},
-    "tenPercent": { "title": "10% Off Discount", "desc": "No term, no condition, no minimum order. Use it wisely.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"}
-  }
+  ],
+  "menus": [
+    {"id": "bbqBurger", "img": "", "name": "BBQ Burger", "desc": "Beef patty, brisket, cheddar, secret BBQ sauce, buns, fries", "price": 110000, "category": "burgers", "isPopular": true },
+    {"id": "doubleCheeseBurger", "img": "", "name": "Double Cheese Burger", "desc": "Beef patty, cheddar, secret sauce, brioche buns, fries", "price": 95000, "category": "burgers", "isPopular": false },
+    {"id": "grilledCheese", "img": "", "name": "Grilled Cheese Sandwich", "desc": "Mozarella, red cheddar, honey mustard, brioche toast", "price": 65000, "category": "burgers", "isPopular": false },
+    {"id": "truffleBugger", "img": "", "name": "Truffle Burger", "desc": "Beef patty, emmental cheese, truffle sauce, romaine lettuce, fries", "price": 110000, "category": "burgers", "isPopular": false },
+    {"id": "cheeseQuesadilla", "img": "", "name": "Cheese Quesadilla", "desc": "Red cheddar, paarmesan, mozarella, dips", "price": 65000, "category": "burgers", "isPopular": false },
+    {"id": "sambalIjo", "img": "", "name": "Sambal Ijo Bowl", "desc": "Twice cooked short ribs, poached egg, house special sambal ijo", "price": 120000, "category": "bowls", "isPopular": false },
+    {"id": "truffleGyudon", "img": "", "name": "Sliced beef, egg, truffle sauce, fried onions, white rice", "desc": "", "price": 90000, "category": "bowls", "isPopular": true },
+    {"id": "friedRice", "img": "", "name": "Kampoeng Fried Rice", "desc": "Chicken satay, emping crackers, housemade pickles", "price": 85000, "category": "bowls", "isPopular": false },
+    {"id": "grilledChicken", "img": "", "name": "Grilled Chicken Sambal Matah", "desc": "Grilled chicken, sambal maatah, mango slaw, white rice", "price": 85000, "category": "bowls", "isPopular": false },
+    {"id": "tiramisu", "img": "", "name": "Tiramisu", "desc": "ladyfinger, espresso, maascarpone cream, cocoa powder", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "cremeBrulee", "img": "", "name": "Creme Brulee", "desc": "Vanilla egg custard, caramel", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "pannacotta", "img": "", "name": "Kopie Pannacotta", "desc": "Caramel coffee paannaacotta, vanilla sauce, micro sponge, crumble, honeycomb", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "kopiSusu", "img": "", "name": "Es Kopi Susu", "desc": "Single espresso, fresh milk, palm sugar", "price": 35000, "category": "drinks", "isPopular": false },
+    {"id": "coldBrew", "img": "", "name": "Caramel Cold Brew", "desc": "Single espresso, fresh milk, caramel", "price": 40000, "category": "drinks", "isPopular": false },
+    {"id": "chocolate", "img": "", "name": "Chocolate", "desc": "Iced served with vanilla ice cream", "price": 45000, "category": "drinks", "isPopular": false },
+    {"id": "greenTea", "img": "", "name": "Green Tea Latte", "desc": "Iced served with vanilla ice cream", "price": 45000, "category": "drinks", "isPopular": false },
+    {"id": "lemongrass", "img": "", "name": "Lemongrass Tea", "desc": "Inhouse tea, lemongrass, orange, lychee", "price": 40000, "category": "drinks", "isPopular": false }
+  ],
+  "promo": [
+    { "id": "freeDelivery", "title": "Free Delivery Promo", "desc": "No term, no condition. Free delivery in Jakarta Area.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"},
+    { "id": "tenPercent", "title": "10% Off Discount", "desc": "No term, no condition, no minimum order. Use it wisely.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"}
+  ]
 }
