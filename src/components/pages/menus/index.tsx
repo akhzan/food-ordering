@@ -1,60 +1,38 @@
 import React from 'react'
-import { Button, Card, Col, Row, Tabs } from 'antd'
+import { Col, Row, Skeleton, Tabs } from 'antd'
+import { useSelector } from 'react-redux'
+import { useHistory, useLocation } from 'react-router-dom'
 import AppLayout from 'components/layout'
-import { PlusOutlined } from '@ant-design/icons'
+import { RootState } from 'redux/root-reducer'
+import MenuItem from 'components/common/menu'
+import { MENUS } from 'config/constants/menus'
 
 const Menus = () => {
+  const history = useHistory()
+  const location = useLocation()
+  const queryFromLocSearch = new URLSearchParams(location.search)
+  const activeKey = queryFromLocSearch.get('category') || 'burgers'
+  const { categories, loading, menus } = useSelector(
+    (state: RootState) => state.data,
+  )
+  const changeTab = (category: string) => {
+    history.push(`${MENUS.MENUS}?category=${category}`)
+  }
   return (
     <AppLayout>
-      <Tabs defaultActiveKey="1" onChange={() => {}}>
-        <Tabs.TabPane tab="Burgers" key="1">
-          <Row gutter={14}>
-            <Col span={6}>
-              <Card
-                cover={
-                  // eslint-disable-next-line react/jsx-wrap-multilines
-                  <img
-                    alt=""
-                    src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
-                  />
-                }
-              >
-                <p className="mb-2 font-bold">Burger</p>
-                <p className="mb-4 text-gray-400">
-                  Rice, sliced beef, egg, and truffle oil.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p>Rp. 65.000</p>
-                  <Button size="small" type="primary" icon={<PlusOutlined />} />
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </Tabs.TabPane>
-        <Tabs.TabPane tab="Rice Bowls" key="2">
-          <Row gutter={14}>
-            <Col span={6}>
-              <Card
-                cover={
-                  // eslint-disable-next-line react/jsx-wrap-multilines
-                  <img
-                    alt=""
-                    src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
-                  />
-                }
-              >
-                <p className="mb-2 font-bold">Truffle Gyudon</p>
-                <p className="mb-4 text-gray-400">
-                  Rice, sliced beef, egg, and truffle oil.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p>Rp. 65.000</p>
-                  <Button size="small" type="primary" icon={<PlusOutlined />} />
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </Tabs.TabPane>
+      {loading && <Skeleton active />}
+      <Tabs activeKey={activeKey} onChange={changeTab}>
+        {Object.values(categories).map((category) => (
+          <Tabs.TabPane tab={category.title} key={category.id}>
+            <Row gutter={[14, 14]}>
+              {(category.menus || []).map((menu) => (
+                <Col span={12} key={menu}>
+                  <MenuItem menu={menus[menu]} />
+                </Col>
+              ))}
+            </Row>
+          </Tabs.TabPane>
+        ))}
       </Tabs>
     </AppLayout>
   )

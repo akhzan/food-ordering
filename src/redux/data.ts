@@ -30,7 +30,7 @@ const dataSlice = createSlice({
     getDataStart: (state) => ({ ...state, loading: true }),
     getDataSuccess: (state, { payload }: PayloadAction<DataState>) => ({
       ...state,
-      data: payload,
+      ...payload,
       loading: false,
     }),
     getDataFailed: (state) => ({ ...state, loading: false }),

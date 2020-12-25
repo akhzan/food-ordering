@@ -28,7 +28,7 @@
     {"id": "truffleBugger", "img": "", "name": "Truffle Burger", "desc": "Beef patty, emmental cheese, truffle sauce, romaine lettuce, fries", "price": 110000, "category": "burgers", "isPopular": false },
     {"id": "cheeseQuesadilla", "img": "", "name": "Cheese Quesadilla", "desc": "Red cheddar, paarmesan, mozarella, dips", "price": 65000, "category": "burgers", "isPopular": false },
     {"id": "sambalIjo", "img": "", "name": "Sambal Ijo Bowl", "desc": "Twice cooked short ribs, poached egg, house special sambal ijo", "price": 120000, "category": "bowls", "isPopular": false },
-    {"id": "truffleGyudon", "img": "", "name": "Sliced beef, egg, truffle sauce, fried onions, white rice", "desc": "", "price": 90000, "category": "bowls", "isPopular": true },
+    {"id": "truffleGyudon", "img": "", "name": "Truffle Gyudon", "desc": "Sliced beef, egg, truffle sauce, fried onions, white rice", "price": 90000, "category": "bowls", "isPopular": true },
     {"id": "friedRice", "img": "", "name": "Kampoeng Fried Rice", "desc": "Chicken satay, emping crackers, housemade pickles", "price": 85000, "category": "bowls", "isPopular": false },
     {"id": "grilledChicken", "img": "", "name": "Grilled Chicken Sambal Matah", "desc": "Grilled chicken, sambal maatah, mango slaw, white rice", "price": 85000, "category": "bowls", "isPopular": false },
     {"id": "tiramisu", "img": "", "name": "Tiramisu", "desc": "ladyfinger, espresso, maascarpone cream, cocoa powder", "price": 65000, "category": "sweets", "isPopular": false },

@@ -1,41 +1,43 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+import { Card, Carousel, Col, Row, Skeleton } from 'antd'
+import { useSelector } from 'react-redux'
+import { RightCircleFilled } from '@ant-design/icons'
 import AppLayout from 'components/layout'
-import { Button, Card, Carousel, Col, Row } from 'antd'
-import { bowlIcon, burgerIcon, cakeIcon, drinkIcon } from 'assets/images'
-import { RightCircleFilled, PlusOutlined } from '@ant-design/icons'
 import { PRIMARY } from 'config/constants/colors'
+import { RootState } from 'redux/root-reducer'
+import { MENUS } from 'config/constants/menus'
+import MenuItem from 'components/common/menu'
 
 const Home = () => {
-  const categories = [
-    { icon: burgerIcon, title: 'Burgers', type: 'burgers' },
-    { icon: bowlIcon, title: 'Rice Bowls', type: 'bowls' },
-    { icon: cakeIcon, title: 'Sweets', type: 'sweets' },
-    { icon: drinkIcon, title: 'Drinks', type: 'drinks' },
-  ]
+  const history = useHistory()
+  const { categories, loading, populars, promo } = useSelector(
+    (state: RootState) => state.data,
+  )
+  const clickCategory = (category: string) => {
+    history.push(`${MENUS.MENUS}?category=${category}`)
+  }
   return (
     <AppLayout>
+      {loading && <Skeleton active />}
       <Carousel autoplay className="mb-12 app-banner">
-        <div>
-          <img
-            src="https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"
-            alt=""
-            className="w-full"
-          />
-        </div>
-        <div>
-          <img
-            src="https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/23/ecf31df4-adad-44aa-a574-983187cafb50.jpg.webp"
-            alt=""
-            className="w-full"
-          />
-        </div>
+        {promo.map((pr) => (
+          <div key={pr.id}>
+            <img src={pr.banner} alt="" className="w-full" />
+          </div>
+        ))}
       </Carousel>
       <div className="mt-12 mb-8">
         <p className="text-2xl font-bold mb-4">Categories</p>
+        {loading && <Skeleton active />}
         <Carousel slidesPerRow={4} arrows className="-mx-2" dots={false}>
-          {categories.map((category) => (
-            <div key={category.type} className="p-2">
-              <Card className="app-category__card rounded-lg" hoverable>
+          {Object.values(categories).map((category) => (
+            <div key={category.id} className="p-2">
+              <Card
+                hoverable
+                className="app-category__card rounded-lg"
+                onClick={() => clickCategory(category.id)}
+              >
                 <div className="flex justify-center items-center flex-col text-center py-6">
                   <img src={category.icon} alt="" style={{ width: '30px' }} />
                   <p className="my-6">{category.title}</p>
@@ -52,42 +54,11 @@ const Home = () => {
       <div className="mt-8">
         <p className="text-2xl font-bold mb-4">Popular</p>
         <Row gutter={14}>
-          <Col span={6}>
-            <Card
-              cover={
-                // eslint-disable-next-line react/jsx-wrap-multilines
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
-                />
-              }
-            >
-              <p className="mb-4 font-bold">Beach BBQ Burger</p>
-              <Button size="small" type="primary" icon={<PlusOutlined />}>
-                Add to cart
-              </Button>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card
-              cover={
-                // eslint-disable-next-line react/jsx-wrap-multilines
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
-                />
-              }
-            >
-              <p className="mb-2 font-bold">Truffle Gyudon</p>
-              <p className="mb-4 text-gray-400">
-                Rice, sliced beef, egg, and truffle oil.
-              </p>
-              <div className="flex justify-between items-center">
-                <p>Rp. 65.000</p>
-                <Button size="small" type="primary" icon={<PlusOutlined />} />
-              </div>
-            </Card>
-          </Col>
+          {populars.map((popular) => (
+            <Col span={6} key={popular.id}>
+              <MenuItem menu={popular} />
+            </Col>
+          ))}
         </Row>
       </div>
     </AppLayout>
