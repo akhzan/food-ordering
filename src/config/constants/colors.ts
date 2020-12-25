@@ -1,2 +1,2 @@
-export const PRIMARY = '#6957eb'
+export const PRIMARY = '#fec912'
 export const SECONDARY = '#ed2190'

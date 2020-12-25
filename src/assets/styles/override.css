@@ -17,3 +17,19 @@
 .ant-form-item-explain {
   font-size: 11px;
 }
+
+.ant-card-body {
+  padding: 1em;
+}
+
+.app-banner .slick-list {
+  border-radius: 1rem;
+}
+
+.app-category__card.ant-card-hoverable:hover {
+  background-color: #fec912;
+}
+
+.app-category__card.ant-card-hoverable:hover svg {
+  color: white;
+}
