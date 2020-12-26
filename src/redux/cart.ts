@@ -20,9 +20,18 @@ const cartSlice = createSlice({
         [menuId]: { menuId, qty: (state.carts[menuId] || { qty: 0 }).qty + 1 },
       },
     }),
+    changeItemQty: (state, { payload }: PayloadAction<Cart>) => {
+      let carts = { ...state.carts } as any
+      if (payload.qty <= 0) {
+        delete carts[payload.menuId]
+      } else {
+        carts = { ...carts, [payload.menuId]: payload }
+      }
+      return { ...state, carts }
+    },
   },
 })
 
-export const { addToCart } = cartSlice.actions
+export const { addToCart, changeItemQty } = cartSlice.actions
 
 export default cartSlice.reducer

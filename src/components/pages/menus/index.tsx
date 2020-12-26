@@ -7,7 +7,7 @@ import { RootState } from 'redux/root-reducer'
 import MenuItem from 'components/common/menu'
 import { MENUS } from 'config/constants/menus'
 
-const Menus = () => {
+const MenuPage = () => {
   const history = useHistory()
   const location = useLocation()
   const queryFromLocSearch = new URLSearchParams(location.search)
@@ -38,4 +38,4 @@ const Menus = () => {
   )
 }
 
-export default Menus
+export default MenuPage

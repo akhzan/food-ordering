@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react'
 import { Badge, Col, Row } from 'antd'
-import { ShoppingCartOutlined } from '@ant-design/icons'
+import { ShoppingOutlined } from '@ant-design/icons'
 import { useSelector } from 'react-redux'
 import { RootState } from 'redux/root-reducer'
+import { Link } from 'react-router-dom'
+import { MENUS } from 'config/constants/menus'
 
 interface Props {
   children: ReactNode
@@ -10,7 +12,6 @@ interface Props {
 
 const AppLayout = ({ children }: Props) => {
   const { carts } = useSelector((state: RootState) => state.cart)
-  console.log(carts)
   const totalMenusInCart = Object.keys(carts).length
   return (
     <div>
@@ -18,18 +19,20 @@ const AppLayout = ({ children }: Props) => {
         <Row justify="center">
           <Col span={14}>
             <div className="flex justify-between items-center">
-              <p className="text-3xl font-bold">Mangan.</p>
+              <Link to={MENUS.HOME} className="text-black">
+                <p className="text-3xl font-bold">Mangan.</p>
+              </Link>
               <Badge size="small" count={totalMenusInCart}>
-                <ShoppingCartOutlined className="text-3xl" />
+                <Link to={MENUS.CART} className="text-black">
+                  <ShoppingOutlined className="text-3xl" />
+                </Link>
               </Badge>
             </div>
           </Col>
         </Row>
       </header>
-      <Row justify="center">
-        <Col span={14}>
-          <div>{children}</div>
-        </Col>
+      <Row justify="center" style={{ minHeight: 'calc(100vh - 184px)' }}>
+        <Col span={14}>{children}</Col>
       </Row>
       <footer>
         <div className="mt-16 py-6 border-t border-gray-200 w-full text-center text-sm text-gray-400">

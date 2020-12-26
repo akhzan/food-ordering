@@ -17,7 +17,10 @@ const MenuItem = ({ menu }: Props) => {
   const { carts } = useSelector((state: RootState) => state.cart)
   const clickAdd = () => {
     dispatch(addToCart(menu.id))
-    message.success(`Successfully added menu item ${menu.name} to cart`, 1)
+    message.success(
+      `Successfully added menu item ${menu.name} to shopping basket`,
+      1,
+    )
   }
   const countInCart = (carts[menu.id] || { qty: 0 }).qty
   const countDisplay =

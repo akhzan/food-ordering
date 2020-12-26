@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { MENUS } from 'config/constants/menus'
 import { PUBLIC_URL } from 'config/env'
 import Home from 'components/pages/home'
-import Menus from 'components/pages/menus'
+import MenuPage from 'components/pages/menus'
+import CartPage from 'components/pages/cart'
 
 const AppRouter = (): ReactElement => (
   <Router basename={PUBLIC_URL}>
@@ -13,7 +14,10 @@ const AppRouter = (): ReactElement => (
         <Home />
       </Route>
       <Route exact path={MENUS.MENUS}>
-        <Menus />
+        <MenuPage />
+      </Route>
+      <Route exact path={MENUS.CART}>
+        <CartPage />
       </Route>
     </Switch>
   </Router>
