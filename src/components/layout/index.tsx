@@ -1,12 +1,17 @@
 import React, { ReactNode } from 'react'
 import { Badge, Col, Row } from 'antd'
 import { ShoppingCartOutlined } from '@ant-design/icons'
+import { useSelector } from 'react-redux'
+import { RootState } from 'redux/root-reducer'
 
 interface Props {
   children: ReactNode
 }
 
 const AppLayout = ({ children }: Props) => {
+  const { carts } = useSelector((state: RootState) => state.cart)
+  console.log(carts)
+  const totalMenusInCart = Object.keys(carts).length
   return (
     <div>
       <header className="py-6 mb-6 border-b border-gray-200">
@@ -14,7 +19,7 @@ const AppLayout = ({ children }: Props) => {
           <Col span={14}>
             <div className="flex justify-between items-center">
               <p className="text-3xl font-bold">Mangan.</p>
-              <Badge size="small" count={5}>
+              <Badge size="small" count={totalMenusInCart}>
                 <ShoppingCartOutlined className="text-3xl" />
               </Badge>
             </div>
