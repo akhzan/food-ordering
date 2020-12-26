@@ -2,22 +2,22 @@
   "categories": [
     {
       "id": "burgers",
-      "icon": "http://localhost:5000/burger(24x24)@3x.png",
+      "icon": "http://localhost:5000/images/burger(24x24)@3x.png",
       "title": "Burgers & Sandwich"
     },
     {
       "id": "bowls",
-      "icon": "http://localhost:5000/noodles(24x24)@3x.png",
+      "icon": "http://localhost:5000/images/noodles(24x24)@3x.png",
       "title": "Rice Bowls"
     },
     {
       "id": "sweets",
-      "icon": "http://localhost:5000/slice-cake(24x24)@3x.png",
+      "icon": "http://localhost:5000/images/slice-cake(24x24)@3x.png",
       "title": "Sweets"
     },
     {
       "id": "drinks",
-      "icon": "http://localhost:5000/soft-drink(24x24)@3x.png",
+      "icon": "http://localhost:5000/images/soft-drink(24x24)@3x.png",
       "title": "Drinks"
     }
   ],
