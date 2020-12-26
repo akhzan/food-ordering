@@ -50,7 +50,7 @@ const CartPage = () => {
   )
   const cart = (
     <Row gutter={[20, 8]}>
-      <Col span={15}>
+      <Col xs={24} sm={15}>
         <div>
           {Object.values(carts).map((cart) => {
             const menu = menus[cart.menuId] || {}
@@ -62,8 +62,18 @@ const CartPage = () => {
                 className="py-6 border-b-4 border-gray-200"
               >
                 <Col>
-                  <p className="font-bold mb-2">{menu.name}</p>
-                  <p>{numberToMoney(menu.price)}</p>
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={menu.img}
+                      alt=""
+                      style={{ height: '50px' }}
+                      className="mr-6"
+                    />
+                    <div>
+                      <p className="font-bold mb-1">{menu.name}</p>
+                      <p>{numberToMoney(menu.price)}</p>
+                    </div>
+                  </div>
                 </Col>
                 <Col>
                   <Button
@@ -101,7 +111,7 @@ const CartPage = () => {
           })}
         </div>
       </Col>
-      <Col span={9}>
+      <Col xs={24} sm={9}>
         <Card>
           <p className="font-bold mb-4">Summary</p>
           <div className="flex justify-between align-middle">

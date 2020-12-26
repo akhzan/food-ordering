@@ -30,9 +30,9 @@ const Home = () => {
       <div className="mt-12 mb-8">
         <p className="text-2xl font-bold mb-4">Categories</p>
         {loading && <Skeleton active />}
-        <Carousel slidesPerRow={4} arrows className="-mx-2" dots={false}>
+        <Row gutter={14}>
           {Object.values(categories).map((category) => (
-            <div key={category.id} className="p-2">
+            <Col xs={12} sm={6} key={category.id} className="p-2">
               <Card
                 hoverable
                 className="app-category__card rounded-lg"
@@ -47,15 +47,15 @@ const Home = () => {
                   />
                 </div>
               </Card>
-            </div>
+            </Col>
           ))}
-        </Carousel>
+        </Row>
       </div>
       <div className="mt-8">
         <p className="text-2xl font-bold mb-4">Popular</p>
         <Row gutter={14}>
           {populars.map((popular) => (
-            <Col span={6} key={popular.id}>
+            <Col xs={12} sm={6} key={popular.id}>
               <MenuItem menu={popular} />
             </Col>
           ))}

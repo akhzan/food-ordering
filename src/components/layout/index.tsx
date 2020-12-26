@@ -17,7 +17,7 @@ const AppLayout = ({ children }: Props) => {
     <div>
       <header className="py-6 mb-6 border-b border-gray-200">
         <Row justify="center">
-          <Col span={14}>
+          <Col xs={22} sm={22} md={18} lg={14}>
             <div className="flex justify-between items-center">
               <Link to={MENUS.HOME} className="text-black">
                 <p className="text-3xl font-bold">Mangan.</p>
@@ -32,7 +32,9 @@ const AppLayout = ({ children }: Props) => {
         </Row>
       </header>
       <Row justify="center" style={{ minHeight: 'calc(100vh - 184px)' }}>
-        <Col span={14}>{children}</Col>
+        <Col xs={22} sm={22} md={18} lg={14}>
+          {children}
+        </Col>
       </Row>
       <footer>
         <div className="mt-16 py-6 border-t border-gray-200 w-full text-center text-sm text-gray-400">

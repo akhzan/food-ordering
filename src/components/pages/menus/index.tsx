@@ -26,7 +26,7 @@ const MenuPage = () => {
           <Tabs.TabPane tab={category.title} key={category.id}>
             <Row gutter={[14, 14]}>
               {(category.menus || []).map((menu) => (
-                <Col span={12} key={menu}>
+                <Col xs={24} sm={12} key={menu}>
                   <MenuItem menu={menus[menu]} />
                 </Col>
               ))}
