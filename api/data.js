@@ -1,4 +1,4 @@
-const data = require('./api/db.server.json')
+const data = require('./db.server.json')
 
 module.exports = (req, res) => {
   res.send(data)
