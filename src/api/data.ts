@@ -11,6 +11,6 @@ interface DataResponse {
 }
 
 export const apiGetData = async (): Promise<DataResponse> => {
-  const response = await call(METHODS.GET, 'data')
+  const response = await call(METHODS.GET, '/api/data')
   return response.data
 }

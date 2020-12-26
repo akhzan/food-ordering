@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "burgers",
+      "icon": "/images/burger(24x24)@3x.png",
+      "title": "Burgers & Sandwich"
+    },
+    {
+      "id": "bowls",
+      "icon": "/images/noodles(24x24)@3x.png",
+      "title": "Rice Bowls"
+    },
+    {
+      "id": "sweets",
+      "icon": "/images/slice-cake(24x24)@3x.png",
+      "title": "Sweets"
+    },
+    {
+      "id": "drinks",
+      "icon": "/images/soft-drink(24x24)@3x.png",
+      "title": "Drinks"
+    }
+  ],
+  "menus": [
+    {"id": "bbqBurger", "img": "/images/mae-mu-I7A_pHLcQK8-unsplash (1) (1) (1).jpg", "name": "BBQ Burger", "desc": "Beef patty, brisket, cheddar, secret BBQ sauce, buns, fries", "price": 110000, "category": "burgers", "isPopular": true },
+    {"id": "doubleCheeseBurger", "img": "/images/patrick-le-NRqdTBu5oMg-unsplash (1) (1) (1).jpg", "name": "Double Cheese Burger", "desc": "Beef patty, cheddar, secret sauce, brioche buns, fries", "price": 95000, "category": "burgers", "isPopular": false },
+    {"id": "grilledCheese", "img": "/images/pixzolo-photography-ZB8NK8cB4EE-unsplash (1) (1).jpg", "name": "Grilled Cheese Sandwich", "desc": "Mozarella, red cheddar, honey mustard, brioche toast", "price": 65000, "category": "burgers", "isPopular": false },
+    {"id": "truffleBugger", "img": "/images/juan-david-naar-ortiz-FsNHvad7s1g-unsplash (1) (1).jpg", "name": "Truffle Burger", "desc": "Beef patty, emmental cheese, truffle sauce, romaine lettuce, fries", "price": 110000, "category": "burgers", "isPopular": false },
+    {"id": "cheeseQuesadilla", "img": "/images/sarah-gualtieri-u6oot_dGiug-unsplash (1) (1).jpg", "name": "Cheese Quesadilla", "desc": "Red cheddar, paarmesan, mozarella, dips", "price": 65000, "category": "burgers", "isPopular": false },
+    {"id": "sambalIjo", "img": "/images/gyudon-cabe-ijo-ala-ade-koerniawan-foto-resep-utama (1) (1).jpg", "name": "Sambal Ijo Bowl", "desc": "Twice cooked short ribs, poached egg, house special sambal ijo", "price": 120000, "category": "bowls", "isPopular": false },
+    {"id": "truffleGyudon", "img": "/images/c4bbbbca-7737-4c06-8332-7714f241cca2 (1) (1).jpg", "name": "Truffle Gyudon", "desc": "Sliced beef, egg, truffle sauce, fried onions, white rice", "price": 90000, "category": "bowls", "isPopular": true },
+    {"id": "friedRice", "img": "/images/annie-spratt-oT7_v-I0hHg-unsplash (1) (1).jpg", "name": "Kampoeng Fried Rice", "desc": "Chicken satay, emping crackers, housemade pickles", "price": 85000, "category": "bowls", "isPopular": false },
+    {"id": "grilledChicken", "img": "/images/mark-deyoung-mjcJ0FFgdWI-unsplash (1) (1).jpg", "name": "Grilled Chicken Sambal Matah", "desc": "Grilled chicken, sambal maatah, mango slaw, white rice", "price": 85000, "category": "bowls", "isPopular": false },
+    {"id": "tiramisu", "img": "/images/marianna-ole-4El3DUkQs2g-unsplash (1) (1).jpg", "name": "Tiramisu", "desc": "ladyfinger, espresso, maascarpone cream, cocoa powder", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "cremeBrulee", "img": "/images/tessa-wilson-AVzCddTGQ3Q-unsplash (1) (1).jpg", "name": "Creme Brulee", "desc": "Vanilla egg custard, caramel", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "pannacotta", "img": "/images/pradeep-javedar-mR7iMMeRrfA-unsplash (1) (1).jpg", "name": "Kopie Pannacotta", "desc": "Caramel coffee paannaacotta, vanilla sauce, micro sponge, crumble, honeycomb", "price": 65000, "category": "sweets", "isPopular": false },
+    {"id": "kopiSusu", "img": "/images/taisiia-shestopal-DU3qNt4g3jc-unsplash (1) (1).jpg", "name": "Es Kopi Susu", "desc": "Single espresso, fresh milk, palm sugar", "price": 35000, "category": "drinks", "isPopular": false },
+    {"id": "coldBrew", "img": "/images/sarah-gualtieri-HsS_hCOXiU4-unsplash (1) (1).jpg", "name": "Caramel Cold Brew", "desc": "Single espresso, fresh milk, caramel", "price": 40000, "category": "drinks", "isPopular": false },
+    {"id": "chocolate", "img": "/images/unnamed (1) (1).jpg", "name": "Chocolate", "desc": "Iced served with vanilla ice cream", "price": 45000, "category": "drinks", "isPopular": false },
+    {"id": "greenTea", "img": "/images/vince-fleming-4Kgzk3Mt2aw-unsplash (1) (1).jpg", "name": "Green Tea Latte", "desc": "Iced served with vanilla ice cream", "price": 45000, "category": "drinks", "isPopular": false },
+    {"id": "lemongrass", "img": "/images/edward-howell-jNs7IPdt4HQ-unsplash (1) (1).jpg", "name": "Lemongrass Tea", "desc": "Inhouse tea, lemongrass, orange, lychee", "price": 40000, "category": "drinks", "isPopular": false }
+  ],
+  "promo": [
+    { "id": "freeDelivery", "title": "Free Delivery Promo", "desc": "No term, no condition. Free delivery in Jakarta Area.", "banner": "/images/Free Delivery (2).jpg"},
+    { "id": "voucher", "title": "Free Voucher", "desc": "No term, no condition, no minimum order. Use it wisely.", "banner": "/images/Free Delivery (1) (1).jpg"}
+  ]
+}

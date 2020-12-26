@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const cors = require('cors')
-const data = require('./db.server.json')
+const data = require('./api/db.server.json')
 
 const app = express()
 const port = process.env.PORT || 5000
