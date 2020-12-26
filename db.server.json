@@ -41,7 +41,7 @@
     {"id": "lemongrass", "img": "http://localhost:5000/images/edward-howell-jNs7IPdt4HQ-unsplash (1) (1).jpg", "name": "Lemongrass Tea", "desc": "Inhouse tea, lemongrass, orange, lychee", "price": 40000, "category": "drinks", "isPopular": false }
   ],
   "promo": [
-    { "id": "freeDelivery", "title": "Free Delivery Promo", "desc": "No term, no condition. Free delivery in Jakarta Area.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"},
-    { "id": "tenPercent", "title": "10% Off Discount", "desc": "No term, no condition, no minimum order. Use it wisely.", "banner": "https://ecs7-p.tokopedia.net/img/cache/1208/NsjrJu/2020/12/22/cdf85713-c6c6-4d82-9df5-1c820339d6c5.jpg.webp"}
+    { "id": "freeDelivery", "title": "Free Delivery Promo", "desc": "No term, no condition. Free delivery in Jakarta Area.", "banner": "http://localhost:5000/images/Free Delivery (2).jpg"},
+    { "id": "voucher", "title": "Free Voucher", "desc": "No term, no condition, no minimum order. Use it wisely.", "banner": "http://localhost:5000/images/Free Delivery (1) (1).jpg"}
   ]
 }
