@@ -6,6 +6,7 @@ import { PUBLIC_URL } from 'config/env'
 import Home from 'components/pages/home'
 import MenuPage from 'components/pages/menus'
 import CartPage from 'components/pages/cart'
+import NotFoundPage from 'components/pages/notfound'
 
 const AppRouter = (): ReactElement => (
   <Router basename={PUBLIC_URL}>
@@ -18,6 +19,9 @@ const AppRouter = (): ReactElement => (
       </Route>
       <Route exact path={MENUS.CART}>
         <CartPage />
+      </Route>
+      <Route>
+        <NotFoundPage />
       </Route>
     </Switch>
   </Router>
