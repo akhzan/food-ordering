@@ -1,6 +1,7 @@
 import React from 'react'
-import { Badge, Button, Card, Col, Row } from 'antd'
+import { Badge, Button, Card, Col, Modal, Row } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link, useHistory } from 'react-router-dom'
 import AppLayout from 'components/layout'
 import { RootState } from 'redux/root-reducer'
 import {
@@ -11,14 +12,25 @@ import {
 } from '@ant-design/icons'
 import { numberToMoney } from 'utils/formatter/currency'
 import { GRAY, PRIMARY } from 'config/constants/colors'
-import { changeItemQty } from 'redux/cart'
+import { changeItemQty, clearCart } from 'redux/cart'
+import { MENUS } from 'config/constants/menus'
 
 const CartPage = () => {
+  const history = useHistory()
   const dispatch = useDispatch()
   const { menus } = useSelector((state: RootState) => state.data)
   const { carts } = useSelector((state: RootState) => state.cart)
+  const clickOrder = () => {
+    Modal.success({
+      onOk: () => history.push(MENUS.HOME),
+      okText: 'Back to home',
+      title: 'Order Success',
+      content: 'Yay! Thank you for ordering foods with us.',
+    })
+    dispatch(clearCart())
+  }
   const total = Object.values(carts).reduce((prev, curr) => {
-    const menu = menus[curr.menuId]
+    const menu = menus[curr.menuId] || {}
     return prev + curr.qty * menu.price
   }, 0)
   const isCartEmpty = Object.keys(carts).length <= 0
@@ -29,6 +41,11 @@ const CartPage = () => {
         Your shopping bag is empty.
       </p>
       <p>Add menu to your shopping bag to enjoy our delicious food.</p>
+      <div className="mt-12">
+        <Button size="small" type="primary">
+          <Link to={MENUS.MENUS}>Browse our awesome menus</Link>
+        </Button>
+      </div>
     </div>
   )
   const cart = (
@@ -36,7 +53,7 @@ const CartPage = () => {
       <Col span={15}>
         <div>
           {Object.values(carts).map((cart) => {
-            const menu = menus[cart.menuId]
+            const menu = menus[cart.menuId] || {}
             return (
               <Row
                 key={cart.menuId}
@@ -91,8 +108,13 @@ const CartPage = () => {
             <p>Total</p>
             <p className="font-bold">{numberToMoney(total)}</p>
           </div>
-          <Button size="small" type="primary" className="w-full mt-8">
-            Buy
+          <Button
+            onClick={clickOrder}
+            size="small"
+            type="primary"
+            className="w-full mt-8"
+          >
+            Order
           </Button>
         </Card>
       </Col>
