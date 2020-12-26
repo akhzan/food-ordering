@@ -1,4 +1,4 @@
-# Food Delivery Web App
+# Food Ordering Web App
 
 https://food-ordering.akhzan.vercel.app/
 
