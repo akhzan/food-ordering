@@ -1,8 +1,18 @@
 # Food Delivery Web App
 
-Hi, Welcome to Food Delivery Web App.
+https://food-ordering.akhzan.vercel.app/
+
+Hi, Welcome to Food Ordering Web App.
 
 > :information_source: **First running on dev**: Please reload the page at the first running on dev if blank screen is shown. This is probably caused by tailwind compatibility issues.
+
+This app is using Vercel for deployment process.
+If you want to run it on your machine, it is strongly recommended to use [Vercel](https://vercel.com/).
+It is because Vercel has Serverless Function feature that enables us to deploy API server without any additional configuration.
+
+If you are using `yarn dev` or `npm dev` to run this app, please change `.env` with following value.
+
+    REACT_APP_API=http://localhost:5000
 
 ## Available Scripts
 
